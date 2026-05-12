@@ -1,0 +1,22 @@
+{
+  "name": "NYC 311 Theme",
+  "dataColors": [
+    "#F7C948",
+    "#FFFFFF",
+    "#F0A500",
+    "#AAAAAA",
+    "#FFE599",
+    "#CC8800"
+  ],
+  "background": "#1A1A1A",
+  "foreground": "#F7C948",
+  "tableAccent": "#F7C948",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{ "value": "Segoe UI" }],
+        "color": [{ "value": "#FFFFFF" }]
+      }
+    }
+  }
+}

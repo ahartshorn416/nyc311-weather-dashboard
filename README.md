@@ -2,14 +2,6 @@
 
 > A production-grade ETL pipeline and interactive Power BI dashboard exploring how weather drives civic complaints across New York City boroughs.
 
-## 🔗 Live Dashboard
-
-👉 **[View the live dashboard here](https://app.powerbi.com/view?r=eyJrIjoiNDYwZTJkMjYtN2E5ZS00MTUxLWJlNzMtOTE1NjQ4ZDBiODVhIiwidCI6IjQ5NTcyY2FlLWNlMDAtNGRmNi1iYjRhLThkZTg3ZGY0YTE2ZSJ9)**
-
-*No Power BI account required · Updates daily at 6:00 AM EST*
-
----
-
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -22,6 +14,8 @@
 👉 **[View the live dashboard here](https://app.powerbi.com/view?r=eyJrIjoiNDYwZTJkMjYtN2E5ZS00MTUxLWJlNzMtOTE1NjQ4ZDBiODVhIiwidCI6IjQ5NTcyY2FlLWNlMDAtNGRmNi1iYjRhLThkZTg3ZGY0YTE2ZSJ9)**
 
 *No Power BI account required · Updates daily at 6:00 AM EST*
+
+📄 **[Read the Full Analysis Report](reports/nyc311_analysis_report.pdf)**
 
 ---
 
@@ -84,10 +78,12 @@ nyc311-weather-dashboard/
 │   └── run_pipeline.py       # Daily orchestrator
 ├── sql/
 │   ├── 01_create_raw.sql     # Raw table DDL
-|   ├── 02_stg_complaints.sql # Cleaning + dedup view
+│   ├── 02_stg_complaints.sql # Cleaning + dedup view
 │   ├── 03_stg_weather.sql    # Weather pivot + borough mapping
 │   ├── 04_mart.sql           # Joined materialized view
-│   ├── pipeline_log.sql      # Create pipeline log to track updates
+│   └── pipeline_log.sql      # Pipeline run tracking table
+├── analysis/
+│   └── nyc311_analysis_report.pdf  # Full data analysis report
 ├── powerbi/
 │   └── nyc311_dashboard.pbix # Power BI file
 ├── .env.example              # Copy to .env and fill in credentials
@@ -148,6 +144,7 @@ psql -U postgres -d nyc311 -f sql/01_create_raw.sql
 psql -U postgres -d nyc311 -f sql/02_stg_complaints.sql
 psql -U postgres -d nyc311 -f sql/03_stg_weather.sql
 psql -U postgres -d nyc311 -f sql/04_mart.sql
+psql -U postgres -d nyc311 -f sql/pipeline_log.sql
 ```
 
 ### 5. Run the Pipeline

@@ -24,6 +24,13 @@ def run():
         print("Fetching weather data...")
         rows_weather = fetch_and_load_weather(conn, days_back=90)
 
+        with conn.cursor() as cur:
+            cur.execute("""
+                INSERT INTO pipeline_log (rows_311, rows_weather)
+                VALUES (%s, %s)
+            """, (rows_311, rows_weather))
+        conn.commit()
+
         log.info(f"Done. 311={rows_311} rows, weather={rows_weather} rows")
         print(f"\n✅ Pipeline complete! {rows_311} complaint rows, {rows_weather} weather rows loaded.")
     except Exception as e:

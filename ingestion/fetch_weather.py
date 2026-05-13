@@ -100,6 +100,6 @@ def insert_weather_rows(conn, rows, station_id, station_name):
                 r.get("value"), # Numeric value in metric units
                 r.get("attributes")  # Quality flags kept raw for traceability
             ))
-            
+
     # Single commit per station batch for efficiency
     conn.commit()

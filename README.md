@@ -83,10 +83,8 @@ nyc311-weather-dashboard/
 │   ├── db.py                 # PostgreSQL connection helper
 │   └── run_pipeline.py       # Daily orchestrator
 ├── sql/
-│   ├── 01_create_raw.sql     # Raw table DDL
-│   ├── 02_stg_complaints.sql # Cleaning + dedup view
-│   ├── 03_stg_weather.sql    # Weather pivot + borough mapping
-│   └── 04_mart.sql           # Joined materialized view
+│   ├── clean.sql             # Raw table DDL, Cleaning + dedup view, Weather pivot + borough mapping, Joined materialized view
+│   ├── pipeline_log.sql      # Create pipeline log to track updates
 ├── powerbi/
 │   └── nyc311_dashboard.pbix # Power BI file
 ├── .env.example              # Copy to .env and fill in credentials

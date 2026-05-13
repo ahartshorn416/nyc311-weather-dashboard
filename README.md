@@ -2,6 +2,14 @@
 
 > A production-grade ETL pipeline and interactive Power BI dashboard exploring how weather drives civic complaints across New York City boroughs.
 
+## 🔗 Live Dashboard
+
+👉 **[View the live dashboard here](https://app.powerbi.com/view?r=eyJrIjoiNDYwZTJkMjYtN2E5ZS00MTUxLWJlNzMtOTE1NjQ4ZDBiODVhIiwidCI6IjQ5NTcyY2FlLWNlMDAtNGRmNi1iYjRhLThkZTg3ZGY0YTE2ZSJ9)**
+
+*No Power BI account required · Updates daily at 6:00 AM EST*
+
+---
+
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)

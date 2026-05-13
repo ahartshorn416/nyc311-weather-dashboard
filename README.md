@@ -9,6 +9,14 @@
 
 ---
 
+## 🔗 Live Dashboard
+
+👉 **[View the live dashboard here](https://app.powerbi.com/view?r=eyJrIjoiNDYwZTJkMjYtN2E5ZS00MTUxLWJlNzMtOTE1NjQ4ZDBiODVhIiwidCI6IjQ5NTcyY2FlLWNlMDAtNGRmNi1iYjRhLThkZTg3ZGY0YTE2ZSJ9)**
+
+*No Power BI account required · Updates daily at 6:00 AM EST*
+
+---
+
 ## 📊 Dashboard Preview
 
 | Tab | Description |
@@ -99,7 +107,7 @@ nyc311-weather-dashboard/
 ### 3. Clone & Configure
 
 ```bash
-git clone https://github.com/yourusername/nyc311-weather-dashboard.git
+git clone https://github.com/ahartshorn416/nyc311-weather-dashboard.git
 cd nyc311-weather-dashboard
 pip install -r requirements.txt
 ```
